@@ -56,7 +56,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
 
           {/* Logo */}
           <motion.div
-            className="relative z-10 mb-12"
+            className="relative z-10 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -64,7 +64,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
             <motion.img
               src={logo}
               alt="WebFast Studios"
-              className="h-20 w-20 sm:h-28 sm:w-28"
+              className="h-16 w-16 sm:h-20 sm:w-20"
               animate={{ 
                 filter: ["brightness(1)", "brightness(1.2)", "brightness(1)"],
               }}
@@ -74,7 +74,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
 
           {/* Brand name */}
           <motion.h1
-            className="relative z-10 mb-8 text-xl font-semibold tracking-wide text-foreground sm:text-2xl"
+            className="relative z-10 mb-6 text-lg font-semibold tracking-wide text-foreground sm:text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
