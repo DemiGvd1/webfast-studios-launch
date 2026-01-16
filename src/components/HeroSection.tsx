@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const WHATSAPP_BASE = "https://wa.me/233505403729";
 const WHATSAPP_GENERAL = `${WHATSAPP_BASE}?text=${encodeURIComponent("Hello, I want a website. I would like to get started.")}`;
@@ -39,17 +40,19 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
-      {/* Spline 3D Background */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://my.spline.design/luminoustorus-sWQyBn5zEZcfqfxw9eku1hOy/"
-          frameBorder="0"
-          className="h-full w-full"
-          style={{ pointerEvents: "none" }}
-          title="3D Background"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-background/80" />
       </div>
 
       {/* Content */}
